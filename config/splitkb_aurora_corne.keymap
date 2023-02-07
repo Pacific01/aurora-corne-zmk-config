@@ -45,7 +45,7 @@
             label = "c_trancada_beha";
             #binding-cells = <0>;
             bindings = <&c_trancada>, <&c_trancada_mayus>;
-            mods = <(MOD_LSFT)>;
+            mods = <(LSHIFT)>;
         };
     };
 
