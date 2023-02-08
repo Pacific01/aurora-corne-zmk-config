@@ -12,7 +12,16 @@
  * Custom definitions for es_ES.UTF-8
  */
 #define C_TRANCADA BSLH
-#define MY_SLH AMPS
+#define ES_SLH AMPS
+#define ES_APOSTROPHE_QUESTION_MARK MINUS
+#define ES_EXCLAMATION_INVERSE_QUESTION_MARK EQUAL
+
+
+/*
+ * Shorthand definitions es_ES.UTF-8
+ */
+#define ES_AP_QM MINUS
+#define ES_EX_IQM EQUAL
 
 / {
     keymap {
@@ -27,7 +36,7 @@
             bindings = <
    &kp TAB        &kp Q        &kp W &kp F     &kp P      &kp B     &kp J &kp L    &kp U      &kp Y    &kp SEMI        &kp BSPC
    &kp LALT       &kp A        &kp R &kp S     &kp T      &kp G     &kp M &kp N    &kp E      &kp I    &kp O           &kp SQT
-   &mt LSHFT ESC  &mt LCTRL Z  &kp X &kp C     &kp D      &kp V     &kp K &kp H    &kp COMMA  &kp DOT  &kp C_TRANCADA  &mt RCTRL MY_SLH
+   &mt LSHFT ESC  &mt LCTRL Z  &kp X &kp C     &kp D      &kp V     &kp K &kp H    &kp COMMA  &kp DOT  &kp C_TRANCADA  &mt RCTRL ES_SLH
                                      &kp LGUI  &kp SPACE  &kp BSPC  &mo 1 &kp RET  &mo 2
             >;
         };
@@ -49,14 +58,14 @@
         raise_layer {
 // --------------------------------------------------------------------------------------
 // | TAB        |  !  |  "  |  ·  |  $  |  %   |   |  &  |  /  |  (  |  )  |  =  | BKSP    |
-// | LALT       |     |     |     |     |      |   |     |     |  [  |  ]  |     |  ´      |
+// | LALT       |     |     |     |     |      |   | ' ? | ¡ ¿ |  [  |  ]  |     |  ´      |
 // | ESC / SHFT |     |     |     |     |      |   |     |     |  {  |  }  |     | RCTRL / |
 //                          | GUI | SPC | BSPC |   | LWR | ENT | RSE |
             bindings = <
-   &trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &kp CARET  &kp AMPS  &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &trans
-   &trans  &trans    &trans  &trans    &trans    &trans     &trans     &trans    &trans           &trans  &trans  &trans
-   &trans  &trans    &trans  &trans    &trans    &trans     &trans     &trans    &trans           &trans  &trans  &trans
-                                       &trans    &trans     &trans     &trans    &trans           &trans
+   &trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &kp CARET     &kp AMPS       &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &trans
+   &trans  &trans    &trans  &trans    &trans    &trans     &kp ES_AP_QM  &kp ES_EX_IQM  &trans           &trans    &trans    &trans
+   &trans  &trans    &trans  &trans    &trans    &trans     &trans        &trans         &trans           &trans    &trans    &trans
+                                       &trans    &trans     &trans        &trans         &trans           &trans
             >;
         };
     };
