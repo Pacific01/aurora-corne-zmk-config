@@ -32,9 +32,9 @@
 
 / {
     behaviors {
-        lt_gt: lt_gt_beha {
+        lt_gt_beha: lt_gt_beha {
             compatible = "zmk,behavior-mod-morph";
-            label = "lt_gt";
+            label = "lt_gt_beha";
             #binding-cells = <0>;
             bindings = <&kp LT>, <&kp GT>;
             mods = <(LSHIFT)>;
