@@ -31,6 +31,15 @@
 #define ES_MNUUN ES_MINUS_UNDERSCORE
 
 / {
+    behaviors {
+        lt_gt: lt_gt_beha {
+            compatible = "zmk,behavior-mod-morph";
+            label = "lt_gt";
+            #binding-cells = <0>;
+            bindings = <&kp LT>, <&kp GT>;
+            mods = <(LSHIFT)>;
+        };
+    };
     keymap {
         compatible = "zmk,keymap";
 
@@ -63,16 +72,16 @@
         };
 
         raise_layer {
-// --------------------------------------------------------------------------------------
-// | TAB        |  !  |  "  |  ·  |  $  |  %   |   |  &  |  /  |  (  |  )  |  =  | BKSP    |
-// | LALT       |     |     |     |     |      |   | ' ? | ¡ ¿ |  [  |  ]  | + * |  ´      |
-// | ESC / SHFT |     |     |     |     |      |   |     |     |  {  |  }  | - _ | RCTRL / |
-//                          | GUI | SPC | BSPC |   | LWR | ENT | RSE |
+// ------------------------------------------------------------------------------------------
+// | TAB        |  !  |  "  |  ·  |  $   |  %   |   |  &  |  /  |  (  |  )  |  =  | BKSP    |
+// | LALT       |     |     |     |      |      |   | ' ? | ¡ ¿ |  [  |  ]  | + * |  ´      |
+// | ESC / SHFT |     |     |     |      |      |   | < > |     |  {  |  }  | - _ | RCTRL / |
+//                          | GUI | RALT | BSPC |   | LWR | ENT | RSE |
             bindings = <
    &trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &kp CARET     &kp AMPS       &kp ES_LPAR   &kp LPAR      &kp RPAR  &trans
    &trans  &trans    &trans  &trans    &trans    &trans     &kp ES_AP_QM  &kp ES_EX_IQM  &kp ES_LBRC   &kp ES_RBRC   &kp RBKT  &trans
-   &trans  &trans    &trans  &trans    &trans    &trans     &trans        &trans         &kp ES_CLBRC  &kp ES_CRBRC  &kp ES_MNUUN  &trans
-                             &trans    &trans    &trans     &trans        &trans         &trans
+   &trans  &trans    &trans  &trans    &trans    &trans     &lt_gt_beha   &trans         &kp ES_CLBRC  &kp ES_CRBRC  &kp ES_MNUUN  &trans
+                             &trans    &kp RALT  &trans     &trans        &trans         &trans
             >;
         };
     };
