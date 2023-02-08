@@ -67,10 +67,10 @@
 // | ESC / SHFT |     |     |     |     |      |   |     |     |  {  |  }  |     | RCTRL / |
 //                          | GUI | SPC | BSPC |   | LWR | ENT | RSE |
             bindings = <
-   &trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &kp CARET  &kp AMPS      &kp ES_LPAR    &kp LPAR      &kp RPAR      &trans
-   &trans  &trans    &trans  &trans    &trans    &trans     &trans     &kp ES_AP_QM  &kp ES_EX_IQM  &kp ES_LBRC   &kp ES_RBRC   &trans
-   &trans  &trans    &trans  &trans    &trans    &trans     &trans     &trans        &trans         &kp ES_CLBRC  &kp ES_CRBRC  &trans
-                             &trans    &trans    &trans     &trans     &trans        &trans
+   &trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &kp CARET     &kp AMPS       &kp ES_LPAR   &kp LPAR      &kp RPAR  &trans
+   &trans  &trans    &trans  &trans    &trans    &trans     &kp ES_AP_QM  &kp ES_EX_IQM  &kp ES_LBRC   &kp ES_RBRC   &trans    &trans
+   &trans  &trans    &trans  &trans    &trans    &trans     &trans        &trans         &kp ES_CLBRC  &kp ES_CRBRC  &trans    &trans
+                             &trans    &trans    &trans     &trans        &trans         &trans
             >;
         };
     };
